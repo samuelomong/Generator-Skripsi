@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { AcademicData } from "../types";
 import FlowchartVisual from "./FlowchartVisual";
+import PresentationSlides from "./PresentationSlides";
 
 interface PreviewSectionProps {
   data: AcademicData;
@@ -25,7 +26,7 @@ export default function PreviewSection({
   isZenMode,
   onToggleZen
 }: PreviewSectionProps) {
-  const [activeTab, setActiveTab] = useState<"ringkasan" | "bab1" | "bab2" | "bab3" | "bab4" | "bab5" | "rumusan" | "panduan">("ringkasan");
+  const [activeTab, setActiveTab] = useState<"ringkasan" | "bab1" | "bab2" | "bab3" | "bab4" | "bab5" | "rumusan" | "panduan" | "presentasi">("presentasi");
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
   const [journalActiveBab, setJournalActiveBab] = useState<"bab1" | "bab2" | "bab3" | "bab4" | "bab5">("bab1");
   const [visView, setVisView] = useState<"tabel" | "grafik">("tabel");
@@ -535,6 +536,7 @@ export default function PreviewSection({
   };
 
   const tabs = [
+    { id: "presentasi", label: "Slide Sidang", icon: GraduationCap },
     { id: "ringkasan", label: "Urgensi & Flowchart", icon: Layers },
     { id: "bab1", label: "BAB I", icon: BookOpen },
     { id: "bab2", label: "BAB II", icon: BookOpen },
@@ -616,6 +618,13 @@ export default function PreviewSection({
 
       {/* Main Panel Content Scrollview */}
       <div className="p-6 overflow-y-auto flex-1 min-h-0 bg-slate-50/10">
+        {/* TAB PRO: SLIDE SIDANG KELAYAKAN */}
+        {activeTab === "presentasi" && (
+          <div className="space-y-6 animate-slideUp">
+            <PresentationSlides data={data} selectedTema={selectedTema} />
+          </div>
+        )}
+
         {/* TAB 1: RINGKASAN */}
         {activeTab === "ringkasan" && (
           <div className="space-y-6 animate-slideUp">

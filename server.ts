@@ -69,7 +69,7 @@ async function startServer() {
               latar_belakang: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Minimal 3 paragraf latar belakang yang logis dan runtut (Paragraf 1: Keadaan ideal/teori/dasar hukum, Paragraf 2: Masalah nyata/fenomena/kesenjangan, Paragraf 3: Solusi yang ditawarkan dan kontribusi)."
+                description: "Minimal 3 paragraf latar belakang yang sangat panjang, komprehensif, spesifik, dan formal (minimal 300-400 kata per paragraf). Paragraf 1: Keadaan ideal/teori/dasar hukum makro. Paragraf 2: Masalah nyata/fenomena empiris/kesenjangan riset terdahulu sektor terkait. Paragraf 3: Solusi teknis konkret yang diajukan beserta kebaruan (novelty) riset."
               },
               identifikasi_masalah: {
                 type: Type.ARRAY,
@@ -109,7 +109,7 @@ async function startServer() {
               landasan_teori: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Minimal 3 paragraf landasan teori konseptual dan komprehensif terkait variabel-variabel utama riset."
+                description: "Minimal 3 paragraf landasan teori konseptual, akademis, dan teoretis yang sangat panjang dan kaya detail (minimal 300-400 kata per paragraf) mengenai teori-teori utama (Grand, Middle, dan Applied Theory) yang mendasari variabel riset."
               },
               tinjauan_pustaka: {
                 type: Type.ARRAY,
@@ -153,12 +153,12 @@ async function startServer() {
               analisis_sistem_data: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Paragraf draf pemaparan analisis data, rancangan arsitektur, perhitungan rumus, atau deskripsi fungsional temuan."
+                description: "Minimal 3 paragraf draf pemaparan analisis data, sistem, rancangan arsitektur, perhitungan matematis, atau deskripsi fungsional temuan yang mendalam, terperinci, dan spesifik (minimal 300-400 kata per paragraf), didukung data/parameter nyata."
               },
               pembahasan_temuan: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Analisis tajam yang menjawab rumusan masalah dengan membandingkan temuan empiris terhadap tinjauan pustaka."
+                description: "Minimal 3 paragraf analisis tajam, detail, dan ilmiah (minimal 350-400 kata per paragraf) yang menjawab setiap pertanyaan rumusan masalah dengan membandingkan temuan penelitian terhadap teori-teori dalam tinjauan pustaka."
               }
             },
             required: ["analisis_sistem_data", "pembahasan_temuan"]
@@ -263,12 +263,16 @@ async function startServer() {
 
 Pedoman penulisan wajib mengikuti tata bahasa Indonesia formal ilmiah, objektif, logis, serta bernilai akademik tinggi, tanpa kesalahan ejaan atau pengetikan (typo) sama sekali. Pastikan kepatuhan penuh terhadap Ejaan Bahasa Indonesia yang Disempurnakan (EYD) dan Kamus Besar Bahasa Indonesia (KBBI).
 
+PADA SETIAP BAB, HASILKAN PARAGRAF YANG SANGAT PANJANG, RINCI, DAN SPESIFIK:
+- Setiap item teks draf dalam 'latar_belakang', 'landasan_teori', 'analisis_sistem_data', dan 'pembahasan_temuan' harus berisi tulisan draf yang sangat detail, kaya teori, dan panjang (minimal 300-400 kata per item/paragraf). Hindari kalimat penjelas ringkas atau normatif.
+- Gunakan data hipotetis konkret, formula matematika, referensi, nama standard, terminologi teknis, dan rancangan nyata spesifik untuk Jurusan "${jurusan}" dan Metode "${metode}".
+
 PANDUAN GENERASI BAB-BY-BAB:
-1. BAB I PENDAHULUAN: Berisi latar belakang yang deduktif (pola piramida terbalik), identifikasi masalah, batasan masalah, tujuan penelitian, serta manfaat penelitian teoritis/praktis.
-2. BAB II TINJAUAN PUSTAKA: Berisi landasan teori konseptual yang membahas variabel utama, tinjauan pustaka empiris (minimal 3 penelitian terdahulu yang relevan), dan kerangka berpikir logis.
+1. BAB I PENDAHULUAN: Berisi latar belakang yang deduktif (pola piramida terbalik), identifikasi masalah, batasan masalah, tujuan penelitian, serta manfaat penelitian teoritis/praktis. Masing-masing paragraf latar belakang menjabarkan data/hukum/masalah secara utuh (min 300-400 kata).
+2. BAB II TINJAUAN PUSTAKA: Berisi landasan teori konseptual yang sangat lengkap membahas variabel utama secara ilmiah, tinjauan pustaka empiris (ulasan mendalam dari minimal 3 publikasi terdahulu), dan kerangka berpikir yang logis (paragraf panjang, min 300 kata).
 3. BAB III METODOLOGI PENELITIAN: Berisi jenis pendekatan riset, langkah-langkah pembahasan (tahapan operasional), sumber/objek data (populasi & sampel), dan teknik analisis interpretasi hasil. Setiap tahapan operasional dan sub-langkah dalam penelitian wajib diperkaya dengan detail metodologis yang operasional dan baku (misalnya menuliskan secara spesifik: 'melakukan uji validitas konten dengan metode Aiken V menggunakan panel ahli', 'menghitung ukuran sampel minimum dari populasi menggunakan rumus Slovin dengan margin of error sebesar 5%', 'mengukur reliabilitas kuesioner dengan metode koefisien Cronbach Alpha', dsb.). Setiap tahapan operasional harus memiliki rincian input (instrumen masuk) dan output (bukti hasil nyata) yang jelas dan realistis.
-4. BAB IV ANALISIS DAN PEMBAHASAN: Berisi deskripsi pemaparan analisis data/sistem/formulasi, diikuti pembahasan temuan mendalam untuk menjawab rumusan masalah.
-5. BAB V KESIMPULAN DAN SARAN: Berisi poin kesimpulan lugas penjawab rumusan masalah dan saran kontributif operasional.
+4. BAB IV ANALISIS DAN PEMBAHASAN: Berisi analisis sistem/data/statistik (misalnya pengujian program, perancangan diagram, hitungan numerik teruji, dsb.) yang dijabarkan dalam minimal 3 paragraf panjang terperinci (min 300-400 kata), diikuti pembahasan temuan mendalam untuk menjawab rumusan masalah dengan membandingkan temuan empiris terhadap tinjauan pustaka (min 350-400 kata per paragraf/item).
+5. BAB V KESIMPULAN DAN SARAN: Berisi kesimpulan logis penjawab jitu rumusan masalah, dan saran rekomendasi operasional taktis untuk penelitian mendatang.
 6. MANDAT UTAMA JUDUL (judul_rekomendasi): Hasilkan 3 rekomendasi judul spesifik, sangat formal, mematuhi EYD (hindari kapitalisasi kata hubung/depan seperti 'di', 'ke', 'dari', 'pada', 'dan', 'yang', 'untuk' kecuali di awal kata) dan KBBI. All terminology must be extremely formal and academic.
 
 PANDUAN LANJUTAN METODOLOGI (BAB III & FLOWCHART):
