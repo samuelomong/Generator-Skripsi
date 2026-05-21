@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#0f172a"/>
+  <!-- Decorative grid lines resembling engineering or academy rules -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#334155" stroke-width="4" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <!-- Mortarboard cap / topi toga -->
+  <path d="M256 120 L400 200 L256 280 L112 200 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="4"/>
+  <path d="M180 238 L180 340 C180 370, 332 370, 332 340 L332 238" fill="none" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tassel icon -->
+  <path d="M340 205 L356 280 L356 310" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="356" cy="315" r="12" fill="#f59e0b"/>
+  <!-- Academic star -->
+  <polygon points="256,150 262,168 280,168 266,179 271,197 256,186 241,197 246,179 232,168 250,168" fill="#f59e0b"/>
+</svg>

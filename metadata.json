@@ -1,0 +1,8 @@
+{
+  "name": "Skripsi Generator Struktur Otomatis",
+  "description": "Generator struktur akademik skripsi otomatis (BAB 1, Rumusan Masalah, Hipotesis, dan Flowchart Penelitian) berdasarkan tema, jurusan, dan metode penelitian.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
